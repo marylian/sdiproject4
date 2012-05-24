@@ -41,22 +41,31 @@ validateEmail=function(emailAddress){
 
 validateNum = function(decimalNum){
 	var decimalPos=decimalNum.indexOf(".");
-	var x;
-	var y;
-	x=decimalNum.substring (0, decimalPos);
-	z=decimalNum.indexOf(".");
+	var x=decimalNum.substring (0, decimalPos);
+	var z=decimalNum.indexOf(".");
 	z=z+3;
-	y=decimalNum.substring(decimalPos, z);
+	var y=decimalNum.substring(decimalPos, z);
 	console.log(x, y);
 //	var result=decimalNum.toFixed(2);
 //	console.log(result);
+};
+
+convString = function(stringNum){
+	var count=0;
+	for (numConv=0; numConv<stringNum.length; numConv++){
+		count++;
+	}
+	var numConv=stringNum.substring(0, count);
+	console.log(numConv);
 };
 
 var phoneNumber="407-276-1427";
 validateNumber(phoneNumber);
 var emailAddress="p.utsav@gmail.com";
 validateEmail(emailAddress);
-var decimalNum="1304.2347389372047";
+var decimalNum="11234.2347389372047";
 validateNum(decimalNum);
-
-
+var stringNum="43827";
+convString(stringNum);
+var mixedArray=[1, 2, 3, "s", "2", "x"];
+sumNum(mixedArray);
