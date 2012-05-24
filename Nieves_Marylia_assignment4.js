@@ -59,6 +59,31 @@ convString = function(stringNum){
 	console.log(numConv);
 };
 
+sumNum = function(mixedArray){
+	var sum=0;
+	for (i=0; i<=mixedArray.length; i++){
+			if (isNaN(mixedArray[i]%2)){
+				i++;
+			}
+			else{
+				sum=sum+mixedArray[i];
+			}
+	}
+	console.log(sum);
+};
+
+percentRadius = function(givenNum, constNum, percent){
+	var convConstNum=(constNum*(percent/100));
+	convConstNum=(constNum+convConstNum);
+	if (givenNum<convConstNum){
+		console.log("The given number is below the percentage of constant number");
+	}
+	else{
+		console.log("The given number is above the percentage of constant number");
+	}
+	
+};
+
 var phoneNumber="407-276-1427";
 validateNumber(phoneNumber);
 var emailAddress="p.utsav@gmail.com";
@@ -67,5 +92,9 @@ var decimalNum="11234.2347389372047";
 validateNum(decimalNum);
 var stringNum="43827";
 convString(stringNum);
-var mixedArray=[1, 2, 3, "s", "2", "x"];
+var mixedArray=[1, 2, 3, "s", "2", 3, 2, "x"];
 sumNum(mixedArray);
+var givenNum=62;
+var constNum=50;
+var percent=25;
+percentRadius(givenNum, constNum, percent);
