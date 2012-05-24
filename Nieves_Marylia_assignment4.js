@@ -62,21 +62,21 @@ convString = function(stringNum){  //Function to convert string number to an act
 
 sumNum = function(mixedArray){  //Function to add the numbers in a mixed array.
 	var sum=0;
-	for (i=0; i<=mixedArray.length; i++){
-			if (isNaN(mixedArray[i]%2)){
-				i++;
+	for (i=0; i<=mixedArray.length; i++){ //For loop to increment the array count.
+			if (isNaN(mixedArray[i]%2)){  //If condition to check if the array element is a number or not.
+				i++;					  //If it is not a number, count will increase by 1 so that it can move to the next element.
 			}
 			else{
-				sum=sum+mixedArray[i];
+				sum=sum+mixedArray[i];  //If it is a number, it will add to the local variable.
 			}
 	}
 	console.log(sum);
 };
 
 percentRadius = function(givenNum, constNum, percent){  //Function to check if a given number is above or below a certain percent of a number.
-	var convConstNum=(constNum*(percent/100));
-	convConstNum=(constNum+convConstNum);
-	if (givenNum<convConstNum){
+	var convConstNum=(constNum*(percent/100));  //  Math to calculate the numeric value of the % of the number.
+	convConstNum=(constNum+convConstNum);  //Adding the percentage variance to the fixed number.
+	if (givenNum<convConstNum){			//Condition to check if it is smaller than the given number.
 		console.log("The given number is below the percentage of constant number");
 	}
 	else{
