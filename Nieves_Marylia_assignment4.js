@@ -30,7 +30,7 @@ validateEmail=function(emailAddress){  //Function to validate the email address 
 		}
 	}
 
-	if (indexAt>indexDot){
+	if (indexAt>indexDot){ // Condition that checks if "@" sign doesnt appear after the last period.
 		console.log("The email address you have entered is incorrect");
 			
 	}
@@ -41,22 +41,22 @@ validateEmail=function(emailAddress){  //Function to validate the email address 
 
 
 validateNum = function(decimalNum){  //Function to format upto 2 decimal positions.
-	var decimalPos=decimalNum.indexOf(".");
-	var x=decimalNum.substring (0, decimalPos);
-	var z=decimalNum.indexOf(".");
-	z=z+3;
-	var y=decimalNum.substring(decimalPos, z);
-	console.log(x, y);
+	var decimalPos=decimalNum.indexOf("."); //Getting index number of the decimal.
+	var x=decimalNum.substring (0, decimalPos);  //Extracting the number before the decimal.
+	var z=decimalNum.indexOf(".");  //Extracting the number after the decimal.
+	z=z+3;							//Assigning the value of only 2 numbers after decimal
+	var y=decimalNum.substring(decimalPos, z);  
+	console.log(x, y);			//Console logging it out in the correct format.
 //	var result=decimalNum.toFixed(2);
 //	console.log(result);
 };
 
 convString = function(stringNum){  //Function to convert string number to an actual number.
 	var count=0;
-	for (numConv=0; numConv<stringNum.length; numConv++){
-		count++;
+	for (numConv=0; numConv<stringNum.length; numConv++){  //For loop to extract out the numbers from a string format.
+		count++;  // Variable that will set the upper limit of string to be extracted.
 	}
-	var numConv=stringNum.substring(0, count);
+	var numConv=stringNum.substring(0, count);  //Extracted number being assigned the numConv variable.
 	console.log(numConv);
 };
 
@@ -91,7 +91,7 @@ var emailAddress="marylia_n@yahoo.com";
 validateEmail(emailAddress);
 var decimalNum="11234.2347389372047";
 validateNum(decimalNum);
-var stringNum="43827";
+var stringNum="438434327";
 convString(stringNum);
 var mixedArray=[1, 2, 3, "s", "2", 3, 2, "x"];
 sumNum(mixedArray);
